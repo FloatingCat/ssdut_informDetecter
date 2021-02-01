@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from sender import sender
+from src.sender import sender
 
 def GetPageInfo1():
     headers = {
@@ -12,14 +12,14 @@ def GetPageInfo1():
     newestHref = str(PageContent.find_all('a',class_='c56628',attrs={ 'target':"_blank"}))
     # newestHref = page.text
     # print(newestHref)
-    with open('0'+'last.txt','r',encoding='utf-8') as file:
+    with open('./data/0'+'last.txt','r',encoding='utf-8') as file:
         lastHref = file.read()
         # print(lastHref)
     file.close()
     if lastHref != newestHref :
         print('Detected!')
         sender('stug_iii@foxmail.com','https://ssdut.dlut.edu.cn/index/bkstz.htm')
-        with open('0'+'last.txt','w',encoding='utf-8') as file:
+        with open('./data/0'+'last.txt','w',encoding='utf-8') as file:
             file.write(newestHref)
             file.close()
     print( '0 Completed')
@@ -34,14 +34,14 @@ def GetPageInfo2():
     newestHref = str(PageContent.select('li > a'))
     # newestHref = page.text
     # print(newestHref)
-    with open('1'+'last.txt','r',encoding='utf-8') as file:
+    with open('./data/1'+'last.txt','r',encoding='utf-8') as file:
         lastHref = file.read()
         # print(lastHref)
     file.close()
     if lastHref != newestHref :
         print('Detected!')
         sender('stug_iii@foxmail.com','http://dutdice.dlut.edu.cn/xszcq/jztz/jztz.htm')
-        with open('1'+'last.txt','w',encoding='utf-8') as file:
+        with open('./data/1'+'last.txt','w',encoding='utf-8') as file:
             file.write(newestHref)
             file.close()
     print( '1 Completed')
