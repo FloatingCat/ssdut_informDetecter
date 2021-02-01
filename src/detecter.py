@@ -18,7 +18,7 @@ def GetPageInfo1():
     file.close()
     if lastHref != newestHref :
         print('Detected!')
-        sender('stug_iii@foxmail.com','https://ssdut.dlut.edu.cn/index/bkstz.htm')
+        sender('https://ssdut.dlut.edu.cn/index/bkstz.htm') #
         with open('./data/0'+'last.txt','w',encoding='utf-8') as file:
             file.write(newestHref)
             file.close()
@@ -40,7 +40,7 @@ def GetPageInfo2():
     file.close()
     if lastHref != newestHref :
         print('Detected!')
-        sender('stug_iii@foxmail.com','http://dutdice.dlut.edu.cn/xszcq/jztz/jztz.htm')
+        sender('http://dutdice.dlut.edu.cn/xszcq/jztz/jztz.htm')
         with open('./data/1'+'last.txt','w',encoding='utf-8') as file:
             file.write(newestHref)
             file.close()

@@ -2,7 +2,7 @@
 - regularly run /src/detecter.py  
 -----
 ### how to modify:
-- change codes in sender.py
+- change codes in sender.py to change sender's and receiver's info
 ```python
     msg_from = 'stugdebug@foxmail.com'  # 发送方邮箱
     passwd = 'gnwbkadqubhuceid'  # 填入发送方邮箱的授权码
